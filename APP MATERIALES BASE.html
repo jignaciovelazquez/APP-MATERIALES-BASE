@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons.css">
+  </head>
+  <body>
+    <header style="background-color: rgb(22,132,231); width:100%; height:60px">
+      <div>
+        <h1 style="color:rgb(255,255,255); padding:20px"> Generador de Listas de Materiales </h1>
+      </div>
+    </header>
+
+    <!--
+    <nav style="background-color: rgb(127, 255, 212)">
+      <p>Nav</p>
+    </nav>
+    -->
+
+    <section style="float:left; background-color: rgb(211, 211, 211); width: 40%">
+    <div>
+    <h2></h2>
+    <button class="create" id="cancelar" style="margin-left:25%; width:100px; height: 35px; font-size: 15px">BORRAR</button>
+    <button class="green" id="GENERAR" style="margin-left:50px; width:100px; height: 35px; font-size: 15px">GENERAR</button>
+    </div>   
+
+    <div>
+      <p style="background-color: rgb(22,132,231); width:97%; height:25px; color:rgb(255,255,255); font-weight:bold; font-size: 20px"> Cajas</p>
+    </div>
+
+    <div>
+      <label style="margin-right:10px; font-size: 15px">Caja a Instalar</label>
+      <select id="CAJA1" style="width: 40%; height: 35px; margin-right:10px; font-size: 15px" >
+        <option value="0" selected></option>
+        <option value="1">Caja de empalme KOC</option>
+        <option value="2">Caja de empalme SUB</option>
+        <option value="3">Caja de empalme HUB</option>
+        <option value="4">Caja KOC 48out indoor</option>
+        <option value="5">Caja montante 8out YOFC</option>
+        <option value="6">Caja de empalme ZTE</option>
+        <option value="7">Caja montante 16out</option>
+        <option value="8">Caja de Piso KOC CHICA 8out</option>
+      </select>
+
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="NCAJA1" list="LNCAJA1" style="width: 60px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="LNCAJA1">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+
+    </div>
+
+    <div>
+      <br>
+      <label style="margin-right:10px; font-size: 15px">Caja a Instalar</label>
+      <select id="CAJA2" style="width: 40%; height: 35px; margin-right:10px; font-size: 15px">
+        <option value="0" selected></option>
+        <option value="1">Caja de empalme KOC</option>
+        <option value="2">Caja de empalme SUB</option>
+        <option value="3">Caja de empalme HUB</option>
+        <option value="4">Caja KOC 48out indoor</option>
+        <option value="5">Caja montante 8out YOFC</option>
+        <option value="6">Caja de empalme ZTE</option>
+        <option value="7">Caja montante 16out</option>
+        <option value="8">Caja de Piso KOC CHICA 8out</option>
+      </select>
+      
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="NCAJA2" list="LNCAJA2" style="width: 60px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="LNCAJA2">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+    </div>
+
+    <div>
+      <br>
+      <label style="margin-right:10px; font-size: 15px">Caja a Instalar</label>
+      <select id="CAJA3" style="width: 40%; height: 35px; margin-right:10px; font-size: 15px">
+        <option value="0" selected></option>
+        <option value="1">Caja de empalme KOC</option>
+        <option value="2">Caja de empalme SUB</option>
+        <option value="3">Caja de empalme HUB</option>
+        <option value="4">Caja KOC 48out indoor</option>
+        <option value="5">Caja montante 8out YOFC</option>
+        <option value="6">Caja de empalme ZTE</option>
+        <option value="7">Caja montante 16out</option>
+        <option value="8">Caja de Piso KOC CHICA 8out</option>
+      </select>
+      
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="NCAJA3" list="LNCAJA3" style="width: 60px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="LNCAJA3">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+    </div>
+
+
+    <div>
+      <br>
+      <label style="margin-right:10px; font-size: 15px">Modelo de Splitter</label>
+      <select id="SPLITTER1" style="width:200px; height: 35px; margin-right:10px; font-size: 15px" >
+        <option value="0" selected></option>
+        <option value="1">Splitter x8</option>
+        <option value="2">Splitter x4</option>
+        <option value="3">Splitter x4 ZTE</option>
+      </select>
+
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="NSPLITTER1" list="LNSPLITTER1" style="width: 60px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="LNSPLITTER1">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+    </div>
+
+    <div>
+      <br>
+      <label style="margin-right:10px; font-size: 15px">Modelo de Splitter</label>
+      <select id="SPLITTER2" style="width:200px; height: 35px; margin-right:10px; font-size: 15px" >
+        <option value="0" selected></option>
+        <option value="1">Splitter x8</option>
+        <option value="2">Splitter x4</option>
+        <option value="3">Splitter x4 ZTE</option>
+      </select>
+      
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="NSPLITTER2" list="LNSPLITTER2" style="width: 60px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="LNSPLITTER2">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+    </div>
+
+    <div>
+      <p style="background-color: rgb(22,132,231); width:97%; height:25px; color:rgb(255,255,255); font-weight:bold; font-size: 20px"> Cables</p>
+    </div>
+
+    <div>
+      <label style="margin-right:54px; font-weight:bold; font-size: 15px"> Fastconnect 50m </label>
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="30067" list="L30067" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="L30067">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+    </div>
+
+    <div>
+      <label style="margin-right:46px; font-weight:bold; font-size: 15px"> Fastconnect 100m </label>
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="30068" list="L30068" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="L30068">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+    </div>
+
+    <div>
+      <label style="margin-right:46px; font-weight:bold; font-size: 15px"> Fastconnect 150m </label>
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="30069" list="L30069" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="L30069">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+    </div>
+    
+    <div>
+      <label style="margin-right:46px; font-weight:bold; font-size: 15px"> Fastconnect 200m </label>
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="30070" list="L30070" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="L30070">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+    </div>
+
+    <div>
+      <label style="margin-right:100px; font-weight:bold; font-size: 15px"> MPO 100m </label>
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="30055" list="L30055" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="L30055">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+    </div>
+
+    <div>
+      <label style="margin-right:100px; font-weight:bold; font-size: 15px"> MPO 150m </label>
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="30056" list="L30056" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="L30056">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+    </div>
+
+    <div>
+      <label style="margin-right:100px; font-weight:bold; font-size: 15px"> MPO 200m </label>
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="30057" list="L30057" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="L30057">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+    </div>
+
+    <div>
+      <p style="background-color: rgb(22,132,231); width:80%; height:5px; padding: 0px"></p>
+    </div>
+
+    <div>
+      <label style="margin-right:107px; font-weight:bold; font-size: 15px"> Fibra Optica 12 pelos </label>
+      <label style="margin-right:10px; font-size: 15px"> Metros</label>
+      <input type="text" id="30012" name="metros" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px">
+    </div>
+
+    <div>
+      <label style="margin-right:55px; font-weight:bold; font-size: 15px"> Fibra Optica 12 con portante </label>
+      <label style="margin-right:10px; font-size: 15px"> Metros</label>
+      <input type="text" id="30026" name="metros" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px">
+    </div>
+
+    <div>
+      <label style="margin-right:107px; font-weight:bold; font-size: 15px"> Fibra Optica 48 pelos </label>
+      <label style="margin-right:10px; font-size: 15px"> Metros</label>
+      <input type="text" id="30021" name="metros" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px">
+    </div>
+
+    <div>
+      <label style="margin-right:107px; font-weight:bold; font-size: 15px"> Fibra Optica 72 pelos </label>
+      <label style="margin-right:10px; font-size: 15px"> Metros</label>
+      <input type="text" id="30014" name="metros" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px">
+    </div>
+
+    <div>
+      <label style="margin-right:110px; font-weight:bold; font-size: 15px"> Cable Riser 24 fibras </label>
+      <label style="margin-right:10px; font-size: 15px"> Metros</label>
+      <input type="text" id="30053" name="metros" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px">
+    </div>
+
+    <div>
+      <label style="margin-right:110px; font-weight:bold; font-size: 15px"> Cable Riser 48 fibras </label>
+      <label style="margin-right:10px; font-size: 15px"> Metros</label>
+      <input type="text" id="30054" name="metros" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px">
+    </div>
+
+    <div>
+      <p style="background-color: rgb(22,132,231); width:80%; height:5px; padding: 0px"></p>
+    </div>
+
+
+    <div>
+      <label style="margin-right:10px; font-weight:bold; font-size: 15px">Cables Drop y de Interconexion</label>
+      <select id="TIPODROP" style="width:270px; height: 35px; margin-right:10px; font-size: 15px" >
+        <option value="0" selected></option>
+        <option value="1">Cable Drop 1 FO flat 60 m</option>
+        <option value="2">Cable Drop 1 FO flat 80 m</option>
+        <option value="3">Cable Drop 1 FO flat 120 m</option>
+        <option value="4">Cable Drop 1 FO 200 m</option>
+        <option value="5">Cable Drop 1 FO 250 m</option>
+        <option value="6">Cable Drop 1 FO 300 m</option>
+        <option value="7">Cable interconexion 1FO 50 m</option>
+        <option value="8">Cable interconexion 1FO 100 m</option>
+        <option value="9">Cable interconexion 1FO 150 m</option>
+        <option value="10">Cable interconexion 1FO 200 m</option>
+      </select>
+
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="DROP" list="LDROP" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="LDROP">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+    </div>
+
+    <div>
+      <label style="margin-right:50px; font-weight:bold; font-size: 15px"> Cable Drop 1 FO flat por metros </label>
+      <label style="margin-right:10px; font-size: 15px"> Metros</label>
+      <input type="text" id="30050" name="metros" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px">
+    </div>
+
+    <div>
+      <p style="background-color: rgb(22,132,231); width:97%; height:25px; color:rgb(255,255,255); font-weight:bold; font-size: 20px"> Ferreteria</p>
+    </div>
+
+    <div>
+      <label style="margin-right:159px; font-weight:bold; font-size: 15px"> Cubrejabalina </label>
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="32047" list="L32047" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="L32047">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+    </div>
+
+    <div>
+      <label style="margin-right:70px; font-weight:bold; font-size: 15px"> Cruz de ganancia 1000mm </label>
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="33066" list="L33066" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="L33066">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+    </div>
+
+    <div>
+      <label style="margin-right:79px; font-weight:bold; font-size: 15px"> Cruz de ganancia 500mm </label>
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="33131" list="L33131" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="L33131">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+    </div>
+    
+    <div>
+      <label style="margin-right:79px; font-weight:bold; font-size: 15px"> Cruz de ganancia 350mm </label>
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="33132" list="L33132" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="L33132">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+    </div>
+
+    <div>
+      <label style="margin-right:88px; font-weight:bold; font-size: 15px"> Cruz de ganancia CTNO </label>
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="32216" list="L32216" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="L32216">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+    </div>
+
+    <div>
+      <label style="margin-right:50px; font-weight:bold; font-size: 15px"> Caño PVC electrico 1"1/2x3m </label>
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="33147" list="L33147" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="L33147">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+    </div>
+
+    <div>
+      <label style="margin-right:35px; font-weight:bold; font-size: 15px"> Caño PVC electrico 110mmx4m </label>
+      <label style="margin-right:10px; font-size: 15px"> Unidad</label>
+      <input type="text" id="33070" list="L33070" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px" >
+      <datalist id="L33070">
+        <option value="0">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+      </datalist>
+    </div>
+
+    <div>
+      <label style="margin-right:176px; font-weight:bold; font-size: 15px"> Tuflex de 2" </label>
+      <label style="margin-right:10px; font-size: 15px"> Metros</label>
+      <input type="text" id="85149" name="metros" style="width: 100px; height: 35px; margin-right:10px; font-size: 15px">
+    </div>
+
+    <div>
+      <p style="background-color: rgb(22,132,231); width:97%; height:25px; color:rgb(255,255,255); font-weight:bold; font-size: 20px"> Adicionales</p>
+    </div>
+
+    <div>
+      <table>
+        <tr style="font-weight:bold; font-size: 15px">
+          <td style="width:60px">Código</td>
+          <td style="width:300px">Descripción del Material</td>
+          <td style="width:60px">Unidad</td>
+          <td style="width:60px">Cantidad</td> 
+        </tr>
+        <tr>
+          <td><input type="text" id="adi11" style="width: 60px; height: 35px; margin-right:10px; font-size: 15px"></td>
+          <td><input type="text" id="adi21" style="width: 300px; height: 35px; margin-right:10px; font-size: 15px"></td>
+          <td><input type="text" id="adi31" style="width: 60px; height: 35px; margin-right:10px; font-size: 15px"></td>
+          <td><input type="text" id="adi41" style="width: 60px; height: 35px; margin-right:10px; font-size: 15px"></td> 
+        </tr>
+        <tr>
+          <td><input type="text" id="adi12" style="width: 60px; height: 35px; margin-right:10px; font-size: 15px"></td>
+          <td><input type="text" id="adi22" style="width: 300px; height: 35px; margin-right:10px; font-size: 15px"></td>
+          <td><input type="text" id="adi32" style="width: 60px; height: 35px; margin-right:10px; font-size: 15px"></td>
+          <td><input type="text" id="adi42" style="width: 60px; height: 35px; margin-right:10px; font-size: 15px"></td> 
+        </tr>
+      </table>
+    </div>
+
+    <footer style="float:none; background-color: rgb(22,132,231)">
+      <h3 style="color:rgb(255,255,255); text-align: center"> Desarrollado por Gestion de Procesos y Servicios S.A. al servicio de TELECENTRO V 1.2 </h3>
+      <h4 style="color:rgb(255,255,255); text-align: center">By Ing. Ignacio Velazquez</h4>
+    </footer>
+
+    </section>
+
+    <section style="float:right; width: 60%">
+
+      <table id="tabla" style="margin-left:6%; margin-top:50px; width: 90%">
+        <thead>
+        <tr style="background-color: rgb(135, 206, 250); font-size: 20px">
+          <th style="padding: 10px; font-weight:bold; width:60px">Código</th>
+          <th style="padding: 10px; font-weight:bold; width:300px">Descripción del Material</th>
+          <th style="padding: 10px; font-weight:bold; width:60px">Unidad</th>
+          <th style="padding: 10px; font-weight:bold; width:60px">Cantidad</th>
+        </tr>
+        </thead>
+        <tbody id="tablaprueba">
+      
+        </tbody>
+        <tfoot style="margin-left:80px; background-color: rgb(135, 206, 250)">
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+        </tfoot>
+
+      </table>
+
+
+
+      <script>
+
+
+        document.getElementById("GENERAR").addEventListener('click',() => {
+
+          document.getElementById("tablaprueba").remove();
+          document.getElementById("tabla").innerHTML = '<table id="tabla" style="margin-left:6%; margin-top:50px; width: 90%"><thead><tr style="background-color: rgb(135, 206, 250); font-size: 20px"><th style="padding: 10px; font-weight:bold; width:60px">Código</th><th style="padding: 10px; font-weight:bold; width:300px">Descripción del Material</th><th style="text-align: center; font-weight:bold; width:60px">Unidad</th><th style="text-align: center; font-weight:bold; width:60px">Cantidad</th></tr></thead><tbody id="tablaprueba" style="font-size: 20px"></tbody><tfoot style="margin-left:80px; background-color: rgb(135, 206, 250)"><tr><td></td><td></td><td></td><td></td></tr></tfoot></table>';
+
+
+
+
+//--------------------------------------------------------------------------- CAJAS Y SPLITTERS -----------------------------------------------------------------------------------------
+
+
+          if ((document.getElementById("NCAJA1").value != "") && (document.getElementById("NCAJA1").value > "0")){
+
+            if (document.getElementById("CAJA1").value == "1"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34138</td><td style="padding: 15px">Caja terminal CTNO con 8 puertos Fastconnect IN/OUT de 3-17mm y 3 bandejas - (Caja KOC)</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA1").value+'</td>';
+        }
+        if (document.getElementById("CAJA1").value == "2"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34130</td><td style="padding: 15px">Caja de empalme FTTH SUB 1+8</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA1").value+'</td>';
+        }
+        if (document.getElementById("CAJA1").value == "3"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34129</td><td style="padding: 15px">Caja de empalme FTTH HUB 1+12</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA1").value+'</td>';
+        }
+        if (document.getElementById("CAJA1").value == "4"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34137</td><td style="padding: 15px">Caja de Edificio GPON KOC 48 Salidas 32 preconectorizados</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA1").value+'</td>';
+        }
+        if (document.getElementById("CAJA1").value == "5"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34125</td><td style="padding: 15px">Caja de empalme para Edificios de 8 salidas GFS-8ZT - (Caja YOFC)</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA1").value+'</td>';
+        }
+        if (document.getElementById("CAJA1").value == "6"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">71104</td><td style="padding: 15px">180000370677 - ZTE 48F Outdoor ODB - GF378-ODB-WOAMV-3A - (Caja ZTE)</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA1").value+'</td>';
+        }
+        if (document.getElementById("CAJA1").value == "7"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34083</td><td style="padding: 15px">Caja de empalme compacta cierre mecanico 12 pelos - 16 out</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA1").value+'</td>';
+        }
+        if (document.getElementById("CAJA1").value == "8"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34151</td><td style="padding: 15px">Caja de Piso KOC 8 salidas para Edificios GPON ( Caja de Piso - New Item)</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA1").value+'</td>';
+        }
+        }
+
+        if ((document.getElementById("NCAJA2").value != "") && (document.getElementById("NCAJA2").value > "0")){
+
+          if (document.getElementById("CAJA2").value == "1"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34138</td><td style="padding: 15px">Caja terminal CTNO con 8 puertos Fastconnect IN/OUT de 3-17mm y 3 bandejas - (Caja KOC)</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA2").value+'</td>';
+        }
+        if (document.getElementById("CAJA2").value == "2"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34130</td><td style="padding: 15px">Caja de empalme FTTH SUB 1+8</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA2").value+'</td>';
+        }
+        if (document.getElementById("CAJA2").value == "3"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34129</td><td style="padding: 15px">Caja de empalme FTTH HUB 1+12</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA2").value+'</td>';
+        }
+        if (document.getElementById("CAJA2").value == "4"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34137</td><td style="padding: 15px">Caja de Edificio GPON KOC 48 Salidas 32 preconectorizados</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA2").value+'</td>';
+        }
+        if (document.getElementById("CAJA2").value == "5"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34125</td><td style="padding: 15px">Caja de empalme para Edificios de 8 salidas GFS-8ZT - (Caja YOFC)</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA2").value+'</td>';
+        }
+        if (document.getElementById("CAJA2").value == "6"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">71104</td><td style="padding: 15px">180000370677 - ZTE 48F Outdoor ODB - GF378-ODB-WOAMV-3A - (Caja ZTE)</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA2").value+'</td>';
+        }
+        if (document.getElementById("CAJA2").value == "7"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34083</td><td style="padding: 15px">Caja de empalme compacta cierre mecanico 12 pelos - 16 out</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA2").value+'</td>';
+        }
+        if (document.getElementById("CAJA2").value == "8"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34151</td><td style="padding: 15px">Caja de Piso KOC 8 salidas para Edificios GPON ( Caja de Piso - New Item)</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA2").value+'</td>';
+        }
+        }
+
+        if ((document.getElementById("NCAJA3").value != "") && (document.getElementById("NCAJA3").value > "0")){
+
+          if (document.getElementById("CAJA3").value == "1"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34138</td><td style="padding: 15px">Caja terminal CTNO con 8 puertos Fastconnect IN/OUT de 3-17mm y 3 bandejas - (Caja KOC)</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA3").value+'</td>';
+        }
+        if (document.getElementById("CAJA3").value == "2"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34130</td><td style="padding: 15px">Caja de empalme FTTH SUB 1+8</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA3").value+'</td>';
+        }
+        if (document.getElementById("CAJA3").value == "3"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34129</td><td style="padding: 15px">Caja de empalme FTTH HUB 1+12</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA3").value+'</td>';
+        }
+        if (document.getElementById("CAJA3").value == "4"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34137</td><td style="padding: 15px">Caja de Edificio GPON KOC 48 Salidas 32 preconectorizados</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA3").value+'</td>';
+        }
+        if (document.getElementById("CAJA3").value == "5"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34125</td><td style="padding: 15px">Caja de empalme para Edificios de 8 salidas GFS-8ZT - (Caja YOFC)</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA3").value+'</td>';
+        }
+        if (document.getElementById("CAJA3").value == "6"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">71104</td><td style="padding: 15px">180000370677 - ZTE 48F Outdoor ODB - GF378-ODB-WOAMV-3A - (Caja ZTE)</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA3").value+'</td>';
+        }
+        if (document.getElementById("CAJA3").value == "7"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34083</td><td style="padding: 15px">Caja de empalme compacta cierre mecanico 12 pelos - 16 out</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA3").value+'</td>';
+        }
+        if (document.getElementById("CAJA3").value == "8"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">34151</td><td style="padding: 15px">Caja de Piso KOC 8 salidas para Edificios GPON ( Caja de Piso - New Item)</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NCAJA3").value+'</td>';
+        }
+        }
+
+        if ((document.getElementById("NSPLITTER1").value != "") && (document.getElementById("NSPLITTER1").value > "0")){
+
+          if (document.getElementById("SPLITTER1").value == "1"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">35109</td><td style="padding: 15px">45200501 - Splitter 1x8 SC/APC 60*7* 4 mm - 1/0.9 mm - Monomodo G.657A (SPL9105) CONECTORIZADO</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NSPLITTER1").value+'</td>';
+        }
+        if (document.getElementById("SPLITTER1").value == "2"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">35110</td><td style="padding: 15px">45200508 - OSPL43201 - Bare optical splitter-1.4 SC/APC 60*7*4mm with Pigtail CONECTORIZADO</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NSPLITTER1").value+'</td>';
+        }
+        if (document.getElementById("SPLITTER1").value == "3"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">71103</td><td style="padding: 15px">SP1x4--1:4 Micro Splitter(without connector) ZTE</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NSPLITTER1").value+'</td>';
+        }
+        }
+
+        if ((document.getElementById("NSPLITTER2").value != "") && (document.getElementById("NSPLITTER2").value > "0")){
+
+          if (document.getElementById("SPLITTER2").value == "1"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">35109</td><td style="padding: 15px">45200501 - Splitter 1x8 SC/APC 60*7* 4 mm - 1/0.9 mm - Monomodo G.657A (SPL9105) CONECTORIZADO</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NSPLITTER2").value+'</td>';
+        }
+        if (document.getElementById("SPLITTER2").value == "2"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">35110</td><td style="padding: 15px">45200508 - OSPL43201 - Bare optical splitter-1.4 SC/APC 60*7*4mm with Pigtail CONECTORIZADO</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NSPLITTER2").value+'</td>';
+        }
+        if (document.getElementById("SPLITTER2").value == "3"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">71103</td><td style="padding: 15px">SP1x4--1:4 Micro Splitter(without connector) ZTE</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("NSPLITTER2").value+'</td>';
+        }
+        }
+
+
+//----------------------------------------------------------------------------- CABLES -----------------------------------------------------------------------------------------------
+
+
+        if ((document.getElementById("30067").value != "") && (document.getElementById("30067").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30067</td><td style="padding: 15px">Cable interconexion ADSS 1FO 50 m/5 mm. Extremos preconectorizados Fastconnect SC/APC</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("30067").value+'</td>';
+        }
+        if ((document.getElementById("30068").value != "") && (document.getElementById("30068").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30068</td><td style="padding: 15px">Cable interconexion ADSS 1FO 100 m/5 mm. Extremos preconectorizados Fastconnect SC/APC</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("30068").value+'</td>';
+        }
+        if ((document.getElementById("30069").value != "") && (document.getElementById("30069").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30069</td><td style="padding: 15px">Cable interconexion ADSS 1FO 150 m/5 mm. Extremos preconectorizados Fastconnect SC/APC</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("30069").value+'</td>';
+        }
+        if ((document.getElementById("30070").value != "") && (document.getElementById("30070").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30070</td><td style="padding: 15px">Cable interconexion ADSS 1FO 200 m/5 mm. Extremos preconectorizados Fastconnect SC/APC</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("30070").value+'</td>';
+        }
+        if ((document.getElementById("30055").value != "") && (document.getElementById("30055").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30055</td><td style="padding: 15px">Cable distribucion 6FO 100 m. Un extremo preconectorizado MPO</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("30055").value+'</td>';
+        }
+        if ((document.getElementById("30056").value != "") && (document.getElementById("30056").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30056</td><td style="padding: 15px">Cable distribucion 6FO 150 m. Un extremo preconectorizado MPO</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("30056").value+'</td>';
+        }
+        if ((document.getElementById("30057").value != "") && (document.getElementById("30057").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30057</td><td style="padding: 15px">Cable distribucion 6FO 200 m. Un extremo preconectorizado MPO</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("30057").value+'</td>';
+        }
+
+
+        if ((document.getElementById("30012").value != "") && (document.getElementById("30012").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30012</td><td style="padding: 15px">Fibra Optica de 12 pelos</td><td style="text-align: center">Metros</td><td style="text-align: center">'+document.getElementById("30012").value+'</td>';
+        }
+        if ((document.getElementById("30026").value != "") && (document.getElementById("30026").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30026</td><td style="padding: 15px">Fibra Optica de 12 pelos con portante</td><td style="text-align: center">Metros</td><td style="text-align: center">'+document.getElementById("30026").value+'</td>';
+        }
+        if ((document.getElementById("30021").value != "") && (document.getElementById("30021").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30021</td><td style="padding: 15px">Fibra Optica de 48 pelos</td><td style="text-align: center">Metros</td><td style="text-align: center">'+document.getElementById("30021").value+'</td>';
+        }
+        if ((document.getElementById("30014").value != "") && (document.getElementById("30014").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30014</td><td style="padding: 15px">Fibra Optica de 72 pelos</td><td style="text-align: center">Metros</td><td style="text-align: center">'+document.getElementById("30014").value+'</td>';
+        }
+        if ((document.getElementById("30053").value != "") && (document.getElementById("30053").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30053</td><td style="padding: 15px">Cable Riser de 24 fibras</td><td style="text-align: center">Metros</td><td style="text-align: center">'+document.getElementById("30053").value+'</td>';
+        }
+        if ((document.getElementById("30054").value != "") && (document.getElementById("30054").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30054</td><td style="padding: 15px">Cable Riser de 48 fibras</td><td style="text-align: center">Metros</td><td style="text-align: center">'+document.getElementById("30054").value+'</td>';
+        }
+
+
+        if ((document.getElementById("DROP").value != "") && (document.getElementById("DROP").value > "0")){
+
+          if (document.getElementById("TIPODROP").value == "1"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30061</td><td style="padding: 15px">Cable Drop 1 FO flat 1 extremo preconectorizado SC/APC - 60 m</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("DROP").value+'</td>';
+        }
+
+        if (document.getElementById("TIPODROP").value == "2"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30062</td><td style="padding: 15px">Cable Drop 1 FO flat 1 extremo preconectorizado SC/APC - 80 m</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("DROP").value+'</td>';
+        }
+
+        if (document.getElementById("TIPODROP").value == "3"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30060</td><td style="padding: 15px">Cable Drop 1 FO flat 1 extremo preconectorizado SC/APC - 120 m</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("DROP").value+'</td>';
+        }
+
+        if (document.getElementById("TIPODROP").value == "4"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30071</td><td style="padding: 15px">Cable drop 1FO 200m. Un extremo preconectorizado SC/APC</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("DROP").value+'</td>';
+        }
+
+        if (document.getElementById("TIPODROP").value == "5"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30072</td><td style="padding: 15px">Cable drop 1FO 250m. Un extremo preconectorizado SC/APC</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("DROP").value+'</td>';
+        }
+
+        if (document.getElementById("TIPODROP").value == "6"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30073</td><td style="padding: 15px">Cable drop 1FO 300m. Un extremo preconectorizado SC/APC</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("DROP").value+'</td>';
+        }
+
+        if (document.getElementById("TIPODROP").value == "7"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30066</td><td style="padding: 15px">Cable interconexion 1FO 50 m. Extremos preconectorizados SC/APC</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("DROP").value+'</td>';
+        }
+
+        if (document.getElementById("TIPODROP").value == "8"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30063</td><td style="padding: 15px">Cable interconexion 1FO 100 m. Extremos preconectorizados SC/APC</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("DROP").value+'</td>';
+        }
+
+        if (document.getElementById("TIPODROP").value == "9"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30064</td><td style="padding: 15px">Cable interconexion 1FO 150 m. Extremos preconectorizados SC/APC</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("DROP").value+'</td>';
+        }
+
+        if (document.getElementById("TIPODROP").value == "10"){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30065</td><td style="padding: 15px">Cable interconexion 1FO 200 m. Extremos preconectorizados SC/APC</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("DROP").value+'</td>';
+        } 
+        }
+
+
+        if ((document.getElementById("30050").value != "") && (document.getElementById("30050").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">30050</td><td style="padding: 15px">Cable Drop fig.8-flat-negro de 1FO. exterior/interior</td><td style="text-align: center">Metros</td><td style="text-align: center">'+document.getElementById("30050").value+'</td>';
+        }
+
+
+
+
+//--------------------------------------------------------------------------- FERRETERIA -----------------------------------------------------------------------------------------
+
+
+        if ((document.getElementById("32047").value != "") && (document.getElementById("32047").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">32047</td><td style="padding: 15px">Cubrejabalina</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("32047").value+'</td>';
+        }
+        if ((document.getElementById("33066").value != "") && (document.getElementById("33066").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">33066</td><td style="padding: 15px">Cruz de ganancia para FO de 1000 mm</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("33066").value+'</td>';
+        }  
+        if ((document.getElementById("33131").value != "") && (document.getElementById("33131").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">33131</td><td style="padding: 15px">Cruz de ganancia para FO de 500 mm</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("33131").value+'</td>';
+        }  
+        if ((document.getElementById("33132").value != "") && (document.getElementById("33132").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">33132</td><td style="padding: 15px">Cruz de ganancia para FO de 350 mm</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("33132").value+'</td>';
+        }  
+        if ((document.getElementById("32216").value != "") && (document.getElementById("32216").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">32216</td><td style="padding: 15px">Cruz de Ganancia (1000mm) de terraza para Caja CTNO (Items Nuevo)</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("32216").value+'</td>';
+        }  
+        if ((document.getElementById("33147").value != "") && (document.getElementById("33147").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">33147</td><td style="padding: 15px">Caño de PVC para inst. eléctrica de 1"½ x 3 m de longitud</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("33147").value+'</td>';
+        }  
+        if ((document.getElementById("33070").value != "") && (document.getElementById("33070").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">33070</td><td style="padding: 15px">Caño de PVC - largo 4 metros - diámetro 110mm - espesor 3,2mm</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("33070").value+'</td>';
+        }  
+        if ((document.getElementById("85149").value != "") && (document.getElementById("85149").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">85149</td><td style="padding: 15px">Tuflex de 2"</td><td style="text-align: center">Unidad</td><td style="text-align: center">'+document.getElementById("85149").value+'</td>';
+        }      
+
+
+
+
+      //--------------------------------------------------------------------------- ADICIONALES -----------------------------------------------------------------------------------------
+
+      
+        if ((document.getElementById("adi41").value != "") && (document.getElementById("adi41").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">'+document.getElementById("adi11").value+'</td><td style="padding: 15px">'+document.getElementById("adi21").value+'</td><td style="text-align: center">'+document.getElementById("adi31").value+'</td><td style="text-align: center">'+document.getElementById("adi41").value+'</td>';
+        }    
+
+        if ((document.getElementById("adi42").value != "") && (document.getElementById("adi42").value > "0")){
+          document.getElementById("tablaprueba").insertRow(-1).innerHTML = '<td style="text-align: center">'+document.getElementById("adi12").value+'</td><td style="padding: 15px">'+document.getElementById("adi22").value+'</td><td style="text-align: center">'+document.getElementById("adi32").value+'</td><td style="text-align: center">'+document.getElementById("adi42").value+'</td>';
+        }
+
+
+
+
+      })
+
+
+
+
+
+document.getElementById("cancelar").addEventListener('click',() => {
+
+  document.getElementById("CAJA1").value = "";
+  document.getElementById("NCAJA1").value = "";
+  document.getElementById("CAJA2").value = "";
+  document.getElementById("NCAJA2").value = "";
+  document.getElementById("CAJA3").value = "";
+  document.getElementById("NCAJA3").value = "";
+  document.getElementById("SPLITTER1").value = "";
+  document.getElementById("NSPLITTER1").value = "";
+  document.getElementById("SPLITTER2").value = "";
+  document.getElementById("NSPLITTER2").value = "";
+  document.getElementById("30067").value = "";
+  document.getElementById("30068").value = "";
+  document.getElementById("30069").value = "";
+  document.getElementById("30070").value = "";
+  document.getElementById("30055").value = "";
+  document.getElementById("30056").value = "";
+  document.getElementById("30057").value = "";
+  document.getElementById("30012").value = "";
+  document.getElementById("30026").value = "";
+  document.getElementById("30021").value = "";
+  document.getElementById("30014").value = "";
+  document.getElementById("30053").value = "";
+  document.getElementById("30054").value = "";
+  document.getElementById("DROP").value = "";
+  document.getElementById("TIPODROP").value = "";
+  document.getElementById("30050").value = "";
+  document.getElementById("32047").value = "";
+  document.getElementById("33066").value = "";
+  document.getElementById("33131").value = "";
+  document.getElementById("33132").value = "";
+  document.getElementById("32216").value = "";
+  document.getElementById("33147").value = "";
+  document.getElementById("33070").value = "";
+  document.getElementById("85149").value = "";
+  document.getElementById("adi41").value = "";
+  document.getElementById("adi11").value = "";
+  document.getElementById("adi21").value = "";
+  document.getElementById("adi31").value = "";
+  document.getElementById("adi42").value = "";
+  document.getElementById("adi12").value = "";
+  document.getElementById("adi22").value = "";
+  document.getElementById("adi32").value = "";
+       
+  })
+
+
+    </script>
+
+
+    </section>
+
+  </body>
+
+</html>
